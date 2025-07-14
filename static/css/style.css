@@ -1,0 +1,127 @@
+/* Global Styles */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-image: url('/static/image2.jpg');
+  background-size:cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Form Styles */
+
+form {
+  background-color:transparent;
+  padding: 30px;
+ /* border: 1px solid #ddd;
+  border-radius: 10px;*/
+  box-shadow: none;
+  width: 400px;
+  height: 700px;
+}
+
+
+
+
+.form-heading {
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: center;
+  color:rgba(237, 230, 230, 0.622);
+  padding:10px;
+  background:linear-gradient(90deg,black,blue,purple);
+}
+
+
+input[type="number"] {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+input[type="number"]:focus {
+  border-color: #5421c9;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+ 
+}
+input[type="number"], textarea {
+  transition: all 0.3s ease-in-out; /* add transition effect */
+}
+
+input[type="number"]:focus, textarea:focus {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* add box shadow on focus */
+  border-color: #66d9ef; /* change border color on focus */
+  background: linear-gradient(90deg,rgb(243, 98, 122),white,blue);
+}
+
+input[type="number"]:focus::placeholder, textarea:focus::placeholder {
+  opacity: 0.5; /* fade out placeholder text on focus */
+  transition: opacity 0.3s ease-in-out; /* add transition effect */
+  
+}
+
+input[type="number"], textarea {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+  font-style: oblique;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bolder;
+}
+
+input[type="number"]:focus, textarea:focus {
+  animation: pulse 1s infinite; /* add pulse animation on focus */
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+button[type="submit"] {
+  background-color: #7b24e0;
+  color: #fff;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.2s;
+  text-align:right;
+  margin: 0 auto; 
+  display: block; 
+
+}
+
+button[type="submit"]:hover {
+  background-color: #b90e47;
+  transform:translate(-0.25rem, -0.25rem);
+  box-shadow:0.25rem 0.25rem rgb(128, 9, 9);
+}
+
+.button:active{
+  transform: translate(0);
+  box-shadow: none;
+}

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    </head>
+    <body>
+       
+        <form action ="{{url_for('detect')}}" method="post">
+            <span class="form-heading">Detect Your Stress Level</span>
+            <input type='number' name='snoring rate' placeholder='Enter Snoring Rate' min='0' max='100' step='0.1'></input>
+            <input type='number' name='respiration rate' placeholder='Enter Respiration Rate' min='6' max='30' step='0.1'></input> 
+            <input type='number' name='body temperature' placeholder='Enter Body Temperature' min='86 max='107' step='0.1'></input>
+            <input type='number' name='limb movement'  placeholder='Enter The Limb Movement' min='0' max='30' step='0.1'></input>
+            <input type='number' name='blood oxygen' placeholder='Enter The Blood Oxygen' min='85' max='100' step='0.1'></input>
+            <input type='number' name='eye movement' placeholder='Enter The Eye Movement' min='0' max='100' step='0.1'></input>
+            <input type='number' name='sleeping hours' placeholder=' Enter Sleeping Hours' min='0' max='24' step='0.1'></input>
+            <input type='number' name='heart rate' placeholder='Enter The Heart Rate' min='40' max='200' step='0.1'></input>
+            <button type='submit'>Detect The Stress</button>
+        </form>
+
+        
+    </body>
+</html>

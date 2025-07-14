@@ -1,0 +1,27 @@
+!<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style3.css') }}">
+    </head>
+    <body>
+        <div class="result">
+            <p><strong>Detected Stress Level:</strong> {{ detected_stress }}</p>
+            <p><strong>Health Tip:</strong> {{ stress_tip }}</p>
+        </div>
+
+        <ul>
+            
+            <li><span class="stress-level">minimal</span>::&nbsp&nbspYou're &nbspFeeling &nbspCalm&nbsp And &nbspPrelaxed.</li>
+            <li><span class="stress-level">low</span> ::&nbsp&nbspYou're &nbspeExperiencing &nbsp A Bit&nbsp Of &nbspStress, &nbspBut&nbsp It's&nbsp Manageable.</li>
+            <li><span class="stress-level">medium</span> ::&nbsp&nbspYou're Feeling &nbsp Moderately Stressed, Take A Break and Relax.</li>
+            <li><span class="stress-level">high</span>:: &nbsp&nbspYou're Highly Stressed, Take Some Time To Calm Down And Prioritize Self-Care.</li>
+            <li><span class="stress-level">max</span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspYou're &nbspExtremely&nbsp Stressed,&nbsp Seek&nbsp Support &nbspFrom &nbspa Friend,&nbsp Family,&nbsp Or &nbspa&nbsp Professional.</li>
+          </ul>
+         <button onclick="location.href='{{ url_for('detect') }}'">Go Back</button>
+    </body>
+</html>
